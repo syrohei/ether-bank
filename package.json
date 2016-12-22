@@ -1,0 +1,12 @@
+{
+  "name": "ether-bank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/syrohei/ether-bank",
+  "author": "syrohei <syrohei@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ethereumjs-testrpc": "^3.0.3",
+    "truffle": "^2.1.1"
+  }
+}

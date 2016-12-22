@@ -1,0 +1,19 @@
+mainnet:
+  build: geth
+  stdin_open: true
+  tty: true
+  expose:
+    - 8545
+    - 30303
+  ports:
+    - "8545:8545"
+    - "30303:30303"
+
+testnet:
+  build: geth
+  stdin_open: true
+  tty: true
+  ports: 
+    - "8546:8545"
+
+  command: /bin/bash /root/test_net.sh
