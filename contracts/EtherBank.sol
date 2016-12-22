@@ -12,11 +12,11 @@ contract EtherBank {
 
   User user = new User(owner);
 
-	function getBalanceOfGeneral(address _addr) returns(uint){
-		return user.getBalanceOfGeneral(_addr);
+  function getBalanceOfGeneral(address _addr) returns(uint){
+    return user.getBalanceOfGeneral(_addr);
 	}
 
-	function getBalanceOfLending(address _addr) returns(uint) {
-		return user.getBalanceOfLending(_addr);
-	}
+  function getBalanceOfLending(address _addr) returns(uint) {
+    return user.getBalanceOfLending(_addr);
+  }
 }
