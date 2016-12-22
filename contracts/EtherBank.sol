@@ -14,7 +14,7 @@ contract EtherBank {
 
   function getBalanceOfGeneral(address _addr) returns(uint){
     return user.getBalanceOfGeneral(_addr);
-	}
+  }
 
   function getBalanceOfLending(address _addr) returns(uint) {
     return user.getBalanceOfLending(_addr);
