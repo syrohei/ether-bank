@@ -8,7 +8,7 @@ import "User.sol";
 // token, see: https://github.com/ConsenSys/Tokens. Cheers!
 
 contract EtherBank {
-  address owner = "0x8f3da9e270c32446d6b81a0c85258b37c3611595";
+  address owner = 0x8f10c10406c56a7788a7ff0117016f3714123723;
 
   User user = new User(owner);
 
