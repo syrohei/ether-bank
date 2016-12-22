@@ -11,6 +11,7 @@ library Validate {
   // special feature of library functions.  It is idiomatic
   // to call the first parameter 'self', if the function can
   // be seen as a method of that object.
+
   function insert(Data storage self, address value)
       returns (bool)
   {

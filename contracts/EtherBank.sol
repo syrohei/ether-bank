@@ -8,26 +8,15 @@ import "User.sol";
 // token, see: https://github.com/ConsenSys/Tokens. Cheers!
 
 contract EtherBank {
-  address owner = ""
-	event Transfer(address indexed _from, address indexed _to, uint256 _value);
+  address owner = "0x8f3da9e270c32446d6b81a0c85258b37c3611595";
 
-	function MetaCoin() {
-		balances[tx.origin] = 10000;
+  User user = new User(owner);
+
+	function getBalanceOfGeneral(address _addr) returns(uint){
+		return user.getBalanceOfGeneral(_addr);
 	}
 
-	function sendCoin(address receiver, uint amount) returns(bool sufficient) {
-		if (balances[msg.sender] < amount) return false;
-		balances[msg.sender] -= amount;
-		balances[receiver] += amount;
-		Transfer(msg.sender, receiver, amount);
-		return true;
-	}
-
-	function getBalanceInEth(address addr) returns(uint){
-		return ConvertLib.convert(getBalance(addr),2);
-	}
-
-	function getBalance(address addr) returns(uint) {
-		return balances[addr];
+	function getBalanceOfLending(address _addr) returns(uint) {
+		return user.getBalanceOfLending(_addr);
 	}
 }
