@@ -10,6 +10,9 @@ you have to start etherum-client geth or testrpc modules. it depend on ethereum 
 yarn install -g
 ```
 ```
+testrpc -b 1
+```
+```
 truffle migrate
 ```
 
