@@ -1,8 +1,8 @@
 # ether-bank
 
-ether-bank is a bank-starterkit for starting financial services 
+ether-bank is a bank-starterkit for starting financial services
 
-## getting started 
+## getting started
 
 you have to start etherum-client geth or testrpc modules. it depend on ethereum eco-system.
 
@@ -10,9 +10,11 @@ you have to start etherum-client geth or testrpc modules. it depend on ethereum 
 yarn install -g
 ```
 ```
+docker-compose up -d
+```
+```
 testrpc -b 1
 ```
 ```
 truffle migrate
 ```
-
