@@ -22,7 +22,7 @@ contract owned {
 
 contract User is owned{
   mapping (address => uint) balances;
-  mapping (address => uint) lending_balances;
+  mapping (address => mapping (address => uint)) lending_balances;
 
   Validate.Data validated_user;
   Validate.Data locked_user;
@@ -50,7 +50,7 @@ contract User is owned{
       throw;
   }
 
-  function send(address _receiver, uint _amount) onlyUser returns(bool sufficient) {
+  function send(address _receiver, uint _amount) returns(bool) {
     if (!onlyUser(msg.sender) || !onlyUser(_receiver)  || !lockable(msg.sender) )
       return false;
     if (balances[msg.sender] < _amount)
@@ -61,14 +61,21 @@ contract User is owned{
     return true;
   }
 
+  function lendingFrom(address _receiver, uint _amount) returns(bool) {
+    if (!send(_receiver, _amount))
+      return false;
+
+    lending_balances[msg.sender][_receiver] += _amount;
+    return true;
+  }
+
   function getBalanceOfGeneral(address addr) returns(uint) {
     return balances[addr];
   }
 
-  function getBalanceOfLending(address addr) returns(uint) {
-    return lending_balances[addr];
+  function getBalanceOfLending(address _lender, address _receiver) returns(uint) {
+    return lending_balances[_lender][_receiver];
   }
-
 
   function onlyUser(address _user) returns (bool){
     return Validate.show(validated_user, _user);

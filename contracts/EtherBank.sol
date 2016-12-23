@@ -19,4 +19,8 @@ contract EtherBank {
   function getBalanceOfLending(address _addr) returns(uint) {
     return user.getBalanceOfLending(_addr);
   }
+
+  function lending(address _receiver, uint _amount) returns (bool) {
+    return user.lendingFrom(_receiver, _amount);
+  }
 }

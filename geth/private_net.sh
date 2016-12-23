@@ -9,4 +9,4 @@ if [ ! -f ~/.primaryaccount ]; then
   geth --testnet --password ~/.accountpassword account new > ~/.primaryaccount
 fi
 
-geth --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --testnet --password ~/.accountpassword --extradata "syrohei"
+geth --rpc --networkid 123456 --nodiscover --maxpeers 0  --rpcaddr "0.0.0.0" --rpccorsdomain "*" --testnet --password ~/.accountpassword --mine --minerthreads 1 --extradata "syrohei"

@@ -33,7 +33,7 @@ module.exports = {
       gas: 3712388
     },
     "privatenet": {
-      network_id: 1337, // custom private network
+      network_id: 123456, // custom private network
       host: "localhost",
       port: 8557,
       gas: 3712388

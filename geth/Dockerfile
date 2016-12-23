@@ -22,5 +22,7 @@ RUN chmod +x /root/test_net.sh
 ADD ./main_net.sh /root/main_net.sh
 RUN chmod +x /root/main_net.sh
 
+ADD ./private_net.sh /root/private_net.sh
+RUN chmod +x /root/private_net.sh
 
 CMD /root/main_net.sh

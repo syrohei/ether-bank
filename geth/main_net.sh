@@ -9,5 +9,4 @@ if [ ! -f ~/.primaryaccount ]; then
   geth  --password ~/.accountpassword account new > ~/.primaryaccount
 fi
 
-geth --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --password ~/.accountpassword 
-
+geth --fast --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --password ~/.accountpassword
