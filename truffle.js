@@ -27,7 +27,7 @@ module.exports = {
         // from - default address to use for any transaction Truffle makes during migrations
     },
     "testnet": {
-      network_id: 2, // Official Ethereum test network
+      network_id: 3, // Official Ethereum test network
       host: "localhost",
       port: 8553,
       gas: 3712388
