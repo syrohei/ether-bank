@@ -1,19 +1,29 @@
 mainnet:
+  restart: always
   build: geth
   stdin_open: true
   tty: true
-  expose:
-    - 8545
-    - 30303
   ports:
-    - "8545:8545"
+    - "8548:8545"
     - "30303:30303"
 
 testnet:
+  restart: always
   build: geth
   stdin_open: true
   tty: true
-  ports: 
-    - "8546:8545"
+  ports:
+    - "8553:8545"
 
   command: /bin/bash /root/test_net.sh
+
+
+privatenet:
+  restart: always
+  build: geth
+  stdin_open: true
+  tty: true
+  ports:
+    - "8557:8545"
+
+  command: /bin/bash /root/private_net.sh
