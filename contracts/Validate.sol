@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.2;
 
 library Validate {
   // We define a new struct datatype that will be used to
